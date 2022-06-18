@@ -4,35 +4,25 @@ public class Student {
     private double grade;
     private double fees_paid;
     private double fees_total;
+    private double remaining_fees;
 
-    Student(int id, String name){
-        id = this.id;
-        name = this.name;
-    }
-    public void setId(int id) {
+    Student(int id, String name,double grade){
         this.id = id;
-    }
-
-    public void setName(String name) {
         this.name = name;
+        this.grade = grade;
+        this.fees_paid = 0;
+        this.fees_total = 1800000;
     }
-
     public void setGrade(double grade) {
         this.grade = grade;
     }
-
-    public void setFees_paid(double fees_paid) {
-        this.fees_paid = fees_paid;
+    public void updateFeesPaid(double fees){
+        fees_paid = fees_paid + fees;
+        School.setTotalMoneyEarned((int) fees_paid);
     }
-
-    public void setFees_total(double fees_total) {
-        this.fees_total = fees_total;
-    }
-
     public double getFees_paid() {
         return fees_paid;
     }
-
     public int getId() {
         return id;
     }
@@ -47,5 +37,9 @@ public class Student {
 
     public double getFees_total() {
         return fees_total;
+    }
+    public double getRemainingFees(){
+        remaining_fees = fees_total - fees_paid;
+        return remaining_fees;
     }
 }

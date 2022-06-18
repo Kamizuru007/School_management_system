@@ -1,33 +1,23 @@
 public class Teacher {
-    int id;
-    String name;
-    double salary;
+    private int id;
+    private String name;
+    private double salary;
 
-    Teacher(int id,String name){
-        id = this.id;
-        name = this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setId(int id) {
+    Teacher(int id,String name,double salary){
         this.id = id;
-    }
-
-    public void setSalary(double salary) {
+        this.name = name;
         this.salary = salary;
     }
 
+    //returningID
     public int getId() {
         return id;
     }
-
+    //returningName
     public String getName() {
         return name;
     }
-
+    //returningSalary
     public double getSalary() {
         return salary;
     }
