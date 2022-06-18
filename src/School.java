@@ -30,7 +30,7 @@ public class School {
     }
 
     public static void setTotalMoneySpent(int MoneySpent) {
-        TotalMoneySpent = TotalMoneyEarned - MoneySpent;
+        TotalMoneySpent = TotalMoneySpent + MoneySpent;
     }
     public int getTotalMoneyEarned() {
         return TotalMoneyEarned;

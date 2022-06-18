@@ -38,8 +38,8 @@ public class Student {
     public double getFees_total() {
         return fees_total;
     }
-    public double getRemainingFees(){
+    public int getRemainingFees(){
         remaining_fees = fees_total - fees_paid;
-        return remaining_fees;
+        return (int) remaining_fees;
     }
 }

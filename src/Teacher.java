@@ -2,6 +2,8 @@ public class Teacher {
     private int id;
     private String name;
     private double salary;
+    private double sal;
+
 
     Teacher(int id,String name,double salary){
         this.id = id;
@@ -23,9 +25,10 @@ public class Teacher {
     }
     public void givenSalary(int Salary){
         salary = salary - Salary;
-        School.setTotalMoneySpent(Salary);
+        sal = sal+Salary;
+        School.setTotalMoneySpent((int) sal);
     }
-    public double remainingSalary(){
-        return salary;
+    public int remainingSalary(){
+        return (int) salary;
     }
 }

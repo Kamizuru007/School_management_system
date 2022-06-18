@@ -42,8 +42,10 @@ public class Main {
 
         System.out.println();
 
-        System.out.println("IIT has earned : " + IIT.getTotalMoneyEarned());
-        System.out.println("IIT has spent  : " + IIT.getTotalMoneySpent());
+        System.out.println("IIT has earned : " + IIT.getTotalMoneyEarned()+"//"
+        );
+        System.out.println("IIT has spent  : " + IIT.getTotalMoneySpent()+"//");
+        System.out.println("IIT has Remain of :"+(IIT.getTotalMoneyEarned()-IIT.getTotalMoneySpent())+"//");
 
     }
 }
