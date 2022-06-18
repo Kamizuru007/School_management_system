@@ -3,7 +3,7 @@ public class Student {
     private String name;
     private double grade;
     private double fees_paid;
-    private double fees_total;
+    private final double fees_total;
     private double remaining_fees;
 
     Student(int id, String name,double grade){
@@ -18,7 +18,7 @@ public class Student {
     }
     public void updateFeesPaid(double fees){
         fees_paid = fees_paid + fees;
-        School.setTotalMoneyEarned((int) fees_paid);
+        School.setTotalMoneyEarned((fees_paid));
     }
     public double getFees_paid() {
         return fees_paid;

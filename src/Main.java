@@ -22,11 +22,28 @@ public class Main {
         studentList.add(S3);
 
         School IIT = new School(teacherList,studentList);
-        System.out.println("IIT has earned :" + IIT.getTotalMoneyEarned());
+
 
         S1.updateFeesPaid(10000);
-        System.out.println(S1.getRemainingFees());
+        System.out.println(S1.getName()+"'s Remaining fees: "+S1.getRemainingFees());
+        S2.updateFeesPaid(100000);
+        System.out.println(S2.getName()+"'s Remaining fees: "+S2.getRemainingFees());
+        S3.updateFeesPaid(1250000);
+        System.out.println(S3.getName()+"'s Remaining fees: "+S3.getRemainingFees());
 
+        System.out.println();
+
+        T1.givenSalary(1000);
+        System.out.println(T1.getName()+"'s Remaining Salary: "+T1.remainingSalary());
+        T2.givenSalary(5500);
+        System.out.println(T2.getName()+"'s Remaining Salary: "+T2.remainingSalary());
+        T3.givenSalary(17000);
+        System.out.println(T3.getName()+"'s Remaining Salary: "+T3.remainingSalary());
+
+        System.out.println();
+
+        System.out.println("IIT has earned : " + IIT.getTotalMoneyEarned());
+        System.out.println("IIT has spent  : " + IIT.getTotalMoneySpent());
 
     }
 }

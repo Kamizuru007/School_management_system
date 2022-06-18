@@ -4,7 +4,7 @@ public class School {
     private List<Teacher> teachers;
     private List<Student> students;
     private static int TotalMoneyEarned;
-    private int TotalMoneySpent;
+    private static int TotalMoneySpent;
 
 
     //constructer
@@ -15,6 +15,23 @@ public class School {
       this.TotalMoneySpent = 0;
     }
 
+    //add a student
+    public void addStudents(Student student) {
+        students.add(student);
+    }
+
+    //add a teacher
+    public void addTeachers(Teacher teacher) {
+        teachers.add(teacher);
+    }
+
+    public static void setTotalMoneyEarned(double totalMoneyEarned) {
+        TotalMoneyEarned = (int) (TotalMoneyEarned + totalMoneyEarned);
+    }
+
+    public static void setTotalMoneySpent(int MoneySpent) {
+        TotalMoneySpent = TotalMoneyEarned - MoneySpent;
+    }
     public int getTotalMoneyEarned() {
         return TotalMoneyEarned;
     }
@@ -32,21 +49,4 @@ public class School {
         return teachers;
     }
 
-    //add a student
-    public void addStudents(Student student) {
-        students.add(student);
-    }
-
-    //add a teacher
-    public void addTeachers(Teacher teacher) {
-        teachers.add(teacher);
-    }
-
-    public static void setTotalMoneyEarned(int totalMoneyEarned) {
-        TotalMoneyEarned = TotalMoneyEarned + totalMoneyEarned;
-    }
-
-    public void setTotalMoneySpent(int MoneySpent) {
-        TotalMoneySpent = TotalMoneyEarned - MoneySpent;
-    }
 }

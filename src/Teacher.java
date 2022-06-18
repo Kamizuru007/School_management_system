@@ -21,4 +21,11 @@ public class Teacher {
     public double getSalary() {
         return salary;
     }
+    public void givenSalary(int Salary){
+        salary = salary - Salary;
+        School.setTotalMoneySpent(Salary);
+    }
+    public double remainingSalary(){
+        return salary;
+    }
 }
